@@ -23,7 +23,7 @@
       :popper-class="popperClass"
       :popper-style="popperStyle"
       :get-popup-container="getPopupContainer"
-      @mouseenter="onMouseenter"
+      @mouseenter="onPopperMouseenter"
       @mouseleave="onMouseleave"
       @show="onContentShow"
       @hide="onContentHide"
@@ -59,6 +59,7 @@ const props = withDefaults(defineProps<IPopperProps>(), {
   trigger: "hover",
   gpuAcceleration: false,
   persistent: true,
+  enterable: true,
   offset: 6,
   placement: "bottom",
   strategy: "absolute",
@@ -105,6 +106,12 @@ const trigger = toRef(props, "trigger");
 // Get Focus
 const onMouseenter = composeEventHandlers(stopWhenControlledOrDisabled, () => {
   if (unref(trigger) === "hover") {
+    onOpen();
+  }
+});
+// Popper Focus
+const onPopperMouseenter = composeEventHandlers(stopWhenControlledOrDisabled, () => {
+  if (props.enterable && unref(trigger) === "hover") {
     onOpen();
   }
 });

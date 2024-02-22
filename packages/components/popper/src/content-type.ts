@@ -35,6 +35,8 @@ export interface IPopperContentProps {
   persistent?: boolean;
   /** 弹窗层级 */
   zIndex?: number;
+  /** 鼠标是否可进入到 popper 中 */
+  enterable?: boolean;
   /** 菜单渲染父节点。默认渲染到 body 上 */
   getPopupContainer?: (el: any) => HTMLElement;
 }

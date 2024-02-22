@@ -52,6 +52,7 @@ popover/style
 | popperStyle       | popper添加style                                                                                          | ^[vue“StyleValue”]                       | —        |
 | zIndex            | popper层级                                                                                               | ^[number]                                | —        |
 | getPopupContainer | 菜单挂载的节点。默认挂载body上, 方法参数是当前触发器节点；如果想挂载到触发器节点下，可以返回这个node参数 | ^[Function] `(node:HTMLElement) => void` | —        |
+| enterable         | 鼠标是否可进入到 popper 中                                                                               | ^[boolean]                               | true     |
 
 ### Popover Events
 
