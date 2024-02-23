@@ -46,7 +46,7 @@ popover/style
 | visible           | 受控模式，来控制它的显示与关闭                                                                           | ^[boolean]                               | —        |
 | hideAfterTime     | 消失的延迟，以毫秒为单位（这个的意义主要是延迟切换，不然hover到下拉菜单节点时，菜单就影藏了）            | ^[number]                                | 200      |
 | showAfterTime     | 出现延迟，以毫秒为单位                                                                                   | ^[number]                                | 0        |
-| transition        | 动画名称                                                                                                 | ^[string]                                | —        |
+| transition        | 下拉菜单的动画name（遵循vuejs transition内置组件的name）                                                 | ^[string]                                | —        |
 | disabled          | 是否禁止                                                                                                 | ^[boolean]                               | false    |
 | popperClass       | popper 添加类名                                                                                          | ^[string]                                | —        |
 | popperStyle       | popper添加style                                                                                          | ^[vue“StyleValue”]                       | —        |
